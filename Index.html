@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADIDAS CASUAL | ESAXEN - FINAL</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#111;background:#fff}
+a{text-decoration:none;color:inherit}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10;gap:15px}
+.logo{font-size:26px;font-weight:900;letter-spacing:2px}
+nav{display:flex;gap:18px}nav a{font-size:12px;font-weight:bold}
+button,.btn{background:#111;color:white;border:1px solid #111;padding:12px 15px;cursor:pointer;font-weight:bold;font-size:12px}
+button:hover,.btn:hover{background:white;color:#111}
+.hero{min-height:490px;display:flex;align-items:center;padding:55px 8%;color:white;background:linear-gradient(90deg,#000c,#0002),url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1500&q=85') center/cover}
+.hero small{letter-spacing:4px}.hero h1{font-size:clamp(45px,8vw,82px);line-height:.95;margin:20px 0}.hero p{font-size:14px;line-height:1.8;max-width:430px}.hero .btn{display:inline-block;background:white;color:black;margin-top:22px}
+.section{padding:60px 6%}.heading{margin-bottom:30px}.heading small{letter-spacing:4px;color:#777}.heading h2{font-size:36px;margin:12px 0}.heading p{font-size:13px;color:#777}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.product{border:1px solid #eee;padding:10px;min-width:0;position:relative;background:white}
+.product img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#f4f4f4}
+.product h3{font-size:14px;margin-top:12px}.product p{font-size:12px;color:#777;margin-top:6px}.price{font-weight:bold;margin:12px 0}
+.product select{width:100%;padding:10px;border:1px solid #ddd;background:white;margin-bottom:8px}.product button{width:100%;font-size:10px;padding:11px 4px}
+.badge-special{position:absolute;top:10px;left:10px;background:#111;color:white;font-size:9px;padding:5px 8px;letter-spacing:1px;z-index:2}
+.banner{background:#111;color:white;text-align:center;padding:40px 15px}.banner h2{font-size:28px;letter-spacing:2px}.banner p{color:#ccc;font-size:13px;line-height:1.8;margin-top:10px}
+.about{text-align:center;background:#f5f5f5;padding:55px 7%}.about h2{font-size:34px;margin:12px}.about p{max-width:600px;margin:auto;color:#555;font-size:14px;line-height:1.8}.about .btn{display:inline-block;margin-top:20px}
+.contact{text-align:center;padding:50px 15px}.contact h2{font-size:30px;margin:12px}.contact p{font-size:13px;color:#777}.contact .btn{display:inline-block;margin-top:20px}
+footer{background:#111;color:white;text-align:center;padding:28px}footer p{font-size:11px;color:#aaa;margin-top:8px}
+.note{font-size:10px;color:#777;margin-top:18px;line-height:1.7}
+.cart-modal{display:none;position:fixed;inset:0;background:#0009;z-index:20;align-items:center;justify-content:center;padding:15px}
+.cart-content{background:white;padding:22px;width:100%;max-width:500px;max-height:90vh;overflow:auto}
+.cart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.cart-head h2{font-size:22px}
+.cart-row{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #eee;font-size:13px}.cart-row button{padding:6px}
+.total{display:flex;justify-content:space-between;font-weight:bold;padding:18px 0}
+.cart-content label{display:block;font-size:12px;font-weight:bold;margin:12px 0}.cart-content input{display:block;width:100%;padding:12px;border:1px solid #ddd;margin-top:6px}#checkout{width:100%}
+@media(max-width:850px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}header{padding:15px 4%}nav{gap:10px}}
+@media(max-width:520px){header{flex-wrap:wrap}.logo{font-size:22px}nav{order:3;width:100%;justify-content:space-between}nav a{font-size:11px}.hero{min-height:410px;padding:40px 6%}.section{padding:45px 4%}.heading h2{font-size:30px}.product{padding:7px}.product h3{font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#home">ESAXEN.</a>
+<nav><a href="#home">HOME</a><a href="#produk">PRODUCT</a><a href="#tentang">ABOUT</a><a href="#kontak">CONTACT</a></nav>
+<button onclick="bukaKeranjang()">CART (<span id="jumlah">0</span>)</button>
+</header>
+<section class="hero" id="home"><div><small>WELCOME TO ESAXEN</small><h1>ADIDAS<br>CASUAL.</h1><p>Casual style for everyday life. 6 Koleksi foto asli ESAXEN.</p><a href="#produk" class="btn">EXPLORE COLLECTION →</a></div></section>
+<section class="section" id="produk">
+<div class="heading"><small>OUR COLLECTION - FOTO ASLI</small><h2>Adidas Casual</h2><p>6 Koleksi foto asli dari ESAXEN - Warszawa, CP Manchester, Samba OG, Classic, Coca Cola.</p></div>
+<div class="products">
+
+<!-- 1. Adidas Warszawa -->
+<article class="product">
+<span class="badge-special">WARZAWA</span>
+<img src="https://i.ibb.co.com/p6PX9qpL/IMG-20261016-WA0054.jpg" alt="Adidas Warszawa">
+<h3>Adidas Warzawa</h3><p>Classic Running</p>
+<div class="price">Rp1.899.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Adidas Warszawa',1899000)">ADD TO CART +</button>
+</article>
+
+<!-- 2. Adidas Spezial CP Manchester -->
+<article class="product" style="border:2px solid #111;">
+<span class="badge-special">SPECIAL • CP MANCHESTER</span>
+<img src="https://i.ibb.co.com/Pzt446ns/IMG-20261016-WA0053.jpg" alt="Adidas Spezial CP Manchester">
+<h3>Adidas Spezial CP Manchester</h3><p>Special Edition - Limited</p>
+<div class="price">Rp2.499.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Adidas Spezial CP Manchester',2499000)">ADD TO CART +</button>
+</article>
+
+<!-- 3. Adidas Samba OG ADIKI5854 -->
+<article class="product">
+<span class="badge-special">SAMBA OG</span>
+<img src="https://i.ibb.co.com/8kgr0CZ/IMG-20261016-WA0051.jpg" alt="Adidas Samba OG ADIKI5854">
+<h3>Adidas Samba OG ADIKI5854</h3><p>Casual Sneakers</p>
+<div class="price">Rp1.999.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Adidas Samba OG ADIKI5854',1999000)">ADD TO CART +</button>
+</article>
+
+<!-- 4. Sepatu Klasik Adidas ID -->
+<article class="product">
+<img src="https://i.ibb.co.com/tpxt0dLz/IMG-20261016-WA0052.jpg" alt="Sepatu Klasik Adidas ID">
+<h3>Sepatu Klasik Adidas ID</h3><p>Classic Collection</p>
+<div class="price">Rp1.799.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Sepatu Klasik Adidas ID',1799000)">ADD TO CART +</button>
+</article>
+
+<!-- 5. Sepatu Samba OG (3UK) -->
+<article class="product">
+<img src="https://i.ibb.co.com/PvTp8Z9T/IMG-20261016-WA0050.jpg" alt="Samba OG 3UK">
+<h3>Adidas Samba OG (3UK)</h3><p>Special Colorway</p>
+<div class="price">Rp2.099.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Adidas Samba OG 3UK',2099000)">ADD TO CART +</button>
+</article>
+
+<!-- 6. Adidas x Coca Cola -->
+<article class="product">
+<span class="badge-special">COLLAB • COCA COLA</span>
+<img src="https://i.ibb.co.com/Ps2BvPrQ/IMG-20261016-WA0049.jpg" alt="Adidas x Coca Cola">
+<h3>Adidas x Coca Cola</h3><p>Collaboration Edition</p>
+<div class="price">Rp2.299.000</div>
+<select><option value="">Pilih ukuran</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option></select>
+<button onclick="tambah(this,'Adidas x Coca Cola',2299000)">ADD TO CART +</button>
+</article>
+
+</div>
+<p class="note">✅ FINAL 6 PRODUK FOTO ASLI - Warszawa, CP Manchester, Samba OG, Klasik, Samba 3UK, Coca Cola.</p>
+</section>
+<section class="banner"><h2>YOUR STYLE, YOUR RULES.</h2><p>6 Koleksi Foto Asli ESAXEN<br>Keep it simple. Keep it casual.</p></section>
+<section class="about" id="tentang"><small>WHO WE ARE</small><h2>About ESAXEN.</h2><p>ESAXEN menghadirkan 6 koleksi spesial: Warszawa, Spezial CP Manchester, Samba OG, Klasik, dan Coca Cola Collaboration.</p><a href="#produk" class="btn">SEE COLLECTION</a></section>
+<section class="contact" id="kontak"><small>LET'S CONNECT</small><h2>Contact ESAXEN</h2><p>Hubungi kami untuk bertanya tentang produk dan pesanan.</p><a class="btn" href="https://wa.me/6283879833077" target="_blank">CHAT WHATSAPP →</a></section>
+<footer><h2>ESAXEN.</h2><p>ADIDAS CASUAL STORE • 6 FOTO ASLI</p><p>© <span id="tahun"></span> ESAXEN. All rights reserved.</p></footer>
+<div class="cart-modal" id="cartBox"><div class="cart-content"><div class="cart-head"><h2>Your Cart</h2><button onclick="tutupKeranjang()">CLOSE ×</button></div><div id="isiKeranjang">Keranjang masih kosong.</div><div class="total"><span>Total</span><span id="total">Rp0</span></div><label>Nama pembeli<input id="nama" placeholder="Nama lengkap"></label><label>Nomor HP<input id="hp" type="tel" placeholder="08xxxxxxxxxx"></label><label>Alamat pengiriman<input id="alamat" placeholder="Alamat lengkap"></label><button id="checkout" onclick="checkout()">CHECKOUT VIA WHATSAPP →</button></div></div>
+<script>
+const nomorWhatsApp = "6283879833077";let keranjang=[];
+document.getElementById("tahun").textContent=new Date().getFullYear();
+function rupiah(n){return "Rp"+n.toLocaleString("id-ID")}
+function tambah(b,n,h){const s=b.parentElement.querySelector("select").value;if(!s){alert("Pilih ukuran!");return}keranjang.push({nama:n,harga:h,ukuran:s});tampilkanKeranjang();alert(n+" berhasil ditambahkan!")}
+function tampilkanKeranjang(){document.getElementById("jumlah").textContent=keranjang.length;const isi=document.getElementById("isiKeranjang");if(keranjang.length===0)isi.textContent="Keranjang masih kosong.";else isi.innerHTML=keranjang.map((it,i)=>`<div class="cart-row"><div><strong>${it.nama}</strong><br>Ukuran ${it.ukuran}<br>${rupiah(it.harga)}</div><button onclick="hapusItem(${i})">Hapus</button></div>`).join("");document.getElementById("total").textContent=rupiah(keranjang.reduce((s,i)=>s+i.harga,0))}
+function hapusItem(i){keranjang.splice(i,1);tampilkanKeranjang()}function bukaKeranjang(){document.getElementById("cartBox").style.display="flex";tampilkanKeranjang()}function tutupKeranjang(){document.getElementById("cartBox").style.display="none"}
+document.getElementById("cartBox").addEventListener("click",function(e){if(e.target===this)tutupKeranjang()});
+function checkout(){if(keranjang.length===0){alert("Keranjang kosong!");return}const nama=document.getElementById("nama").value.trim();const hp=document.getElementById("hp").value.trim();const alamat=document.getElementById("alamat").value.trim();if(!nama||!hp||!alamat){alert("Lengkapi nama, HP, alamat!");return}const daftar=keranjang.map((it,i)=>`${i+1}. ${it.nama} | Ukuran ${it.ukuran} | ${rupiah(it.harga)}`).join("\n");const total=keranjang.reduce((s,i)=>s+i.harga,0);const pesan=`Halo ESAXEN, saya ingin memesan:\n\n${daftar}\n\nTotal: ${rupiah(total)}\nNama: ${nama}\nNomor HP: ${hp}\nAlamat: ${alamat}\n\nMohon konfirmasi.`;window.open("https://wa.me/"+nomorWhatsApp+"?text="+encodeURIComponent(pesan),"_blank")}tampilkanKeranjang();
+</script>
+</body>
+</html>
